@@ -56,5 +56,53 @@ public class App {
             y-=1; // x-=1; x=x-1; x--;
         }while(y>0);
         System.out.println("");
+        
+        /*
+            *
+            **
+            ***
+            ****
+            *****
+            ****
+            ***
+            **
+            *
+
+            a=5
+            =a
+            1
+            12
+            123
+            1234
+            12345
+            <a a=>1
+            1234
+            123
+            12
+            1
+         */
+        int a=10;
+        for(int i=1;i<=a;i++){
+            // for(int j=1;j<=i;j++){
+            //     System.out.print("*");
+            // }
+            cetakBintang(1, i);
+            System.out.print("\n");
+        }
+        for(int j=a-1;j>=1;j--){
+            // for(int i=1;i<=j;i++){
+            //     System.out.print("*");
+            // }
+            cetakBintang(1, j);
+            System.out.print("\n");
+        }
+    }
+
+    public static void cetakBintang(int i, int j){
+        System.out.print("*");
+        i+=1;
+        if(i<=j){
+            cetakBintang(i, j);
+        }
     }
 }
