@@ -23,11 +23,18 @@ public class App {
 
          //aplikasi untuk mencetak bil ganjil dari 1 -20
         //ulang2 bilangan dari 20 -1 1,2,3,4,5,6,7,8-20
-        int x=4;
+        int x=20;
         while(x>0){ //kalau x<=0 hentikan
              // modulus %, i (bilangan) % 2 = 0 Genap. i % 2 =1 Ganjil
-             System.out.print(x + " " + ((x%2==1) ? " Ganjil " : " Genap "));
+            
+             //jika ketemu angka 3, lanjutkan perulangan abaikan perintah setelahnya
+             if(x==3) {
+                 x-=1;
+                 continue;
+            }
 
+             System.out.print(x + " " + ((x%2==1) ? " Ganjil " : " Genap "));
+             
             // if(x%2==1){
             //     System.out.print(x + " ");
             // }
